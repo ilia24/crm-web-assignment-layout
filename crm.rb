@@ -7,7 +7,6 @@ Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
 Contact.create('Alex', 'Mastryukov', 'alex@gmail.com', 'llama enthusiast')
 @@crm_app_name = "Ilia's CRM"
 
-
 get '/' do
   erb :index
 end
@@ -20,7 +19,11 @@ get '/contacts/new' do
   erb :new_contact
 end
 
-post 'new_contact' do
+post '/contacts/new' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
   redirect to('/contacts')
+end
+
+get '/contacts/delete' do
+  erb :delete
 end
