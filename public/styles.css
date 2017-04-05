@@ -55,7 +55,7 @@ table {
 
 
 header h1 {
-  background-color: black;
+  background-color: rgb(35, 35, 35);
   color: white;
   text-align: center;
   padding: 15px 0px;
@@ -84,15 +84,21 @@ header ul li a {
  }
 
  .alignment {
-   width: 94%;
+   width: 725px;
    margin: 15px auto;
  }
 
-.alignment .contactcount {
+.contactcount {
   background-color: salmon;
   padding: 15px 12px;
   font-size: 20px;
   font-weight: 500;
+}
+.contactnumber {
+  font-size: 21px;
+  font-weight: 900;
+  border-bottom: 3px solid;
+  border-color: turquoise;
 }
 
 .contact {

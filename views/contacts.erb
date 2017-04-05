@@ -1,4 +1,4 @@
-<h1 class="contactcount">There are <%= Contact.all.count %> contacts</h1>
+<h1 class="contactcount">There are <span class="contactnumber"><%= Contact.all.count %></span> contacts</h1>
 
 <ul>
 <% Contact.all.each do |contact| %>
