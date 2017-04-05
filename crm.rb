@@ -27,3 +27,9 @@ end
 get '/contacts/delete' do
   erb :delete
 end
+
+post '/contacts/delete' do
+  puts params[:selected_contact]
+  puts Contact.find(:selected_contact)
+    redirect to('/contacts')
+end
