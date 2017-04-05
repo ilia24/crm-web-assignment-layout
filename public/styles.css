@@ -106,19 +106,21 @@ header ul li a {
   margin-top: 15px;
   padding: 25px 25px 23px;
 }
-
-.contact_info {
-  font-size: 22px;
+.contact_info a {
+  text-decoration: none;
+  font-size: 24px;
   font-weight: 900;
+  color: black;
 }
 
 .contact p,
-.contact a {
+.contact p a {
   font-size: 17px;
   margin-top: 2px;
 }
+
 .contact p {
-  font-size: 21px;  
+  font-size: 21px;
 }
 
 footer {
