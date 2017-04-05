@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font: 12px Helvetica, Arial, Garuda, sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -46,16 +46,76 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /*END OF RESET*/
 
 
-.welcome {
-  background-color: rgb(23, 44, 176);
+header h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+header ul li {
+  list-style-type: none;
+  background-color: lightgrey;
+  text-align: center;
+  font-size: 25px;
+  padding: 6px;
+  margin: 1px;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 600;
   color: white;
 }
-header ul {
-  list-style-type: none;
-}
+
  .new_contact {
    background-color: green;
  }
+
+ .alignment {
+   width: 94%;
+   margin: 15px auto;
+ }
+
+.alignment .contactcount {
+  background-color: salmon;
+  padding: 15px 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact {
+  background-color: turquoise;
+  margin-top: 15px;
+  padding: 25px 25px 23px;
+}
+
+.contact_info {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.contact p,
+.contact a {
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 13px;
+}
