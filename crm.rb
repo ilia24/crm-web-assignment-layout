@@ -8,7 +8,7 @@ Contact.create('Alex', 'Mastryukov', 'alex@gmail.com', 'llama enthusiast')
 @@crm_app_name = "Ilia's CRM"
 
 get '/' do
-  erb :index
+  erb :contacts
 end
 
 get '/contacts' do
