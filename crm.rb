@@ -15,13 +15,13 @@ get '/contacts' do
   erb :contacts
 end
 
-get '/contacts/new' do
+get '/new' do
   erb :new_contact
 end
 
-post '/contacts/new' do
+post '/new' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
-  redirect to('/contacts')
+  redirect to('/')
 end
 
 get '/contacts/delete' do
