@@ -5,7 +5,7 @@ Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
 Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
 Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
 Contact.create('Alex', 'Mastryukov', 'alex@gmail.com', 'llama enthusiast')
-@@crm_app_name = "Ilia's CRM"
+
 
 get '/' do
   erb :contacts
@@ -64,6 +64,16 @@ delete '/contacts/:id' do
   else
     raise Sinatra::NotFound
   end
+end
+
+get '/contacts/:id/buttondelete' do
+  @contact = Contact.find(params[:id].to_i)
+if @contact
+  @contact.delete
+  redirect to('/')
+else
+  raise Sinatra::NotFound
+end
 end
 
 # get '/contacts/delete' do
