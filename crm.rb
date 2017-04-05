@@ -24,12 +24,21 @@ post '/new' do
   redirect to('/')
 end
 
-get '/contacts/delete' do
-  erb :delete
+get '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end
 
-post '/contacts/delete' do
-  puts params[:selected_contact]
-  puts Contact.find(:selected_contact)
-    redirect to('/contacts')
-end
+# get '/contacts/delete' do
+#   erb :delete
+# end
+#
+# post '/contacts/delete' do
+#   puts params[:selected_contact]
+#   puts Contact.find(:selected_contact)
+#     redirect to('/contacts')
+# end
